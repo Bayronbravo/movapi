@@ -10,7 +10,7 @@ console.log("Database_URL", process.env.DATABASE_URL);
 console.log("====================");
 //coneccion a mongobd
 mongoose
-    mongoose.connect(process.env.MONGODB_URI)
+    mongoose.connect("MONGODB_URI=mongodb+srv://bayron:clave1234@cluster0.guapwn5.mongodb.net/?retryWrites=true&w=majority")
     .then(()=> console.log("Conected"))
     .catch((error) => console.error(error));
 
