@@ -6,7 +6,7 @@ const movieRoutes = require("./routes/movie");
 const app = express();
 const port = process.env.PORT || 9000;
 console.log("====================");
-console.log("Database_URL", process.env.DATABASE_URL);
+console.log("Database_URL", process.env.MONGODB_URI);
 console.log("====================");
 //coneccion a mongobd
 mongoose
