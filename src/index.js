@@ -4,7 +4,6 @@ require("dotenv").config();
 const movieRoutes = require("./routes/movie");
 const cors = require('cors');
 
-app.use(cors())
 const app = express();
 const port = process.env.PORT || 9000;
 console.log("====================");
@@ -19,5 +18,7 @@ mongoose
 //middleware
 app.use(express.json());
 app.use('/api', movieRoutes);
+
+app.use(cors())
 
 app.listen(port, () => console.log('server running on port', port));
