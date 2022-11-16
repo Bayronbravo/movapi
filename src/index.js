@@ -2,7 +2,9 @@ const express = require ('express');
 const mongoose  = require("mongoose");
 require("dotenv").config();
 const movieRoutes = require("./routes/movie");
+const cors = require('cors');
 
+app.use(cors())
 const app = express();
 const port = process.env.PORT || 9000;
 console.log("====================");
