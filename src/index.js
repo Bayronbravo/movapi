@@ -4,8 +4,11 @@ require("dotenv").config();
 const movieRoutes = require("./routes/movie");
 const cors = require('cors');
 
+
 const app = express();
 const port = process.env.PORT || 9000;
+app.use(cors());
+
 console.log("====================");
 console.log("Database_URL", process.env.MONGODB_URI);
 console.log("====================");
@@ -18,7 +21,5 @@ mongoose
 //middleware
 app.use(express.json());
 app.use('/api', movieRoutes);
-
-app.use(cors())
 
 app.listen(port, () => console.log('server running on port', port));
